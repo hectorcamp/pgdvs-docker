@@ -1,0 +1,37 @@
+#!/usr/bin/with-contenv bash
+
+# Fetch site or update existing pgdvs
+if [[ ! -d /config/pgdvs/.git ]]; then
+  echo '-----------------------'
+  echo '| Installing pgdvs    |'
+  echo '-----------------------'
+  git clone -b master https://github.com/ddurdle/Python-GoogleDrive-VideoStream /config/pgdvs
+elif [[ -d /config/pgdvs/.git ]]; then
+  echo '-----------------------'
+  echo '|  Updating pgdvs  |'
+  echo '-----------------------'
+  cd /config/pgdvs/ || return
+  git reset --hard origin/master
+  git pull --rebase
+fi
+
+# Fetch site or update existing pgdvs_extra
+
+if [[ ! -d /config/pgdvs_extra/.git ]]; then
+  echo '-----------------------'
+  echo '| Installing pgdvs_extra |'
+  echo '-----------------------'
+  git clone -b master https://github.com/ddurdle/GoogleDrive-VideoStream_extra /config/pgdvs_extra
+elif [[ -d /config/pgdvs_extra/.git ]]; then
+  echo '-----------------------'
+  echo '|Updating pgdvs_extra|'
+  echo '-----------------------'
+  cd /config/pgdvs_extra/ || return
+  git reset --hard origin/master
+  git pull --rebase
+fi
+
+
+# Set Permissions
+chown -R abc:abc \
+	/config
