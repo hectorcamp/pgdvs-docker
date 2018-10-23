@@ -10,9 +10,16 @@ RUN apk add --no-cache --update python tini bash git
 # Add local files
 COPY root/ /
 
-WORKDIR /config/pgdvs/
+# Add local files
+COPY root/ /
 
-ENTRYPOINT ["tini", "--", "python", "default.py"]
-CMD ["/config/pgdvs/gdrive.db"]
+# Ports and volumes
+EXPOSE 80
 VOLUME /config
-EXPOSE 9988
+
+# WORKDIR /config/pgdvs/
+
+#ENTRYPOINT ["tini", "--", "python", "default.py"]
+#CMD ["/config/pgdvs/gdrive.db"]
+#VOLUME /config
+#EXPOSE 9988
