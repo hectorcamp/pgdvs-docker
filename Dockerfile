@@ -5,10 +5,10 @@ MAINTAINER RXWatcher
 ARG BUILD_DATE
 ARG VERSION
 
-RUN apk add --update python tini
+RUN apk add --no-cache --update python tini bash git 
 WORKDIR /config/pgdvs/
 
-# ENTRYPOINT ["tini", "--", "python", "default.py"]
-#CMD ["/config/pgdvs/gdrive.db"]
+ENTRYPOINT ["tini", "--", "python", "default.py"]
+CMD ["/config/pgdvs/gdrive.db"]
 VOLUME /config
 EXPOSE 9988
