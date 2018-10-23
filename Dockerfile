@@ -1,4 +1,4 @@
-FROM just-containers:base-alpine
+FROM lsiobase/alpine:3.7
 MAINTAINER RXWatcher
 
 # Set version label
