@@ -1,4 +1,4 @@
-FROM just-containers/base-alpine
+FROM just-containers:base-alpine
 MAINTAINER RXWatcher
 
 # Set version label
