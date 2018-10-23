@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-# Fetch site or update existing pgdvs
+# Fetch pgdvs or update existing pgdvs
 if [[ ! -d /config/pgdvs/.git ]]; then
   echo '-----------------------'
   echo '| Installing pgdvs    |'
@@ -15,7 +15,7 @@ elif [[ -d /config/pgdvs/.git ]]; then
   git pull --rebase
 fi
 
-# Fetch site or update existing pgdvs_extra
+# Fetch pgdvs_extra or update existing pgdvs_extra
 
 if [[ ! -d /config/pgdvs_extra/.git ]]; then
   echo '-----------------------'
