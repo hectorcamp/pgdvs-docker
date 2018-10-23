@@ -6,6 +6,10 @@ ARG BUILD_DATE
 ARG VERSION
 
 RUN apk add --no-cache --update python tini bash git 
+
+# Add local files
+COPY root/ /
+
 WORKDIR /config/pgdvs/
 
 ENTRYPOINT ["tini", "--", "python", "default.py"]
