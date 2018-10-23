@@ -6,10 +6,6 @@ ARG BUILD_DATE
 ARG VERSION
 
 RUN apk add --no-cache --update python tini bash git 
-RUN PUID=${PUID:-1000} \ 
-        && PGID=${PGID:-1000} \ 
-        && groupmod -o -g "$PGID" root \ 
-        && usermod -o -u "$PUID" root
 		
 # Add local files
 COPY root/ /
