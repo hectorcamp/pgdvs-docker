@@ -1,0 +1,2 @@
+#!/usr/bin/execlineb -P
+python /config/pgdvs/default.py /config/pgdvs/gdrive.db
