@@ -8,8 +8,6 @@ A Emby Google Drive File strm service.
 
 https://github.com/ddurdle/Python-GoogleDrive-VideoStream
 
-![organizr](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/organizr-icon.png)
-
 ## Usage
 
 ```
