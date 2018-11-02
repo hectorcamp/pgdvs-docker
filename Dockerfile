@@ -13,6 +13,7 @@ COPY root/ /
 # Ports and volumes
 EXPOSE 9988
 VOLUME /config
+VOLUME /u01
 
 WORKDIR /config/pgdvs/
 
