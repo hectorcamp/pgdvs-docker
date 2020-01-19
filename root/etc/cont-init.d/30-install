@@ -15,23 +15,6 @@ elif [[ -d /u01/pgdvs/.git ]]; then
   git pull --rebase
 fi
 
-# Fetch pgdvs_extra or update existing pgdvs_extra
-
-if [[ ! -d /u01/pgdvs_extra/.git ]]; then
-  echo '-----------------------'
-  echo '| Installing pgdvs_extra |'
-  echo '-----------------------'
-  git clone -b master https://github.com/ddurdle/GoogleDrive-VideoStream_extra /u01/pgdvs_extra
-elif [[ -d /u01/pgdvs_extra/.git ]]; then
-  echo '-----------------------'
-  echo '|Updating pgdvs_extra|'
-  echo '-----------------------'
-  cd /u01/pgdvs_extra/ || return
-  git reset --hard origin/master
-  git pull --rebase
-fi
-
-
 # Set Permissions
 chown -R abc:abc \
 	/u01
