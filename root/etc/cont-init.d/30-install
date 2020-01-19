@@ -5,7 +5,7 @@ if [[ ! -d /u01/pgdvs/.git ]]; then
   echo '-----------------------'
   echo '| Installing pgdvs    |'
   echo '-----------------------'
-  git clone -b master https://github.com/ddurdle/Python-GoogleDrive-VideoStream /u01/pgdvs
+  git clone -b master https://github.com/hectorcamp/teste /u01/pgdvs
 elif [[ -d /u01/pgdvs/.git ]]; then
   echo '-----------------------'
   echo '|  Updating pgdvs  |'
